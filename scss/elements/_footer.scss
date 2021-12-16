@@ -1,0 +1,41 @@
+/*FOOTER*/
+
+.footer{
+  width: 100vw;
+  box-shadow: 0px -5px 40px #00000029;
+}
+.footer__box{
+  display: flex;
+  justify-content: space-between;
+}
+.footer__column{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.footer__column.left{
+  flex-direction: column;
+  margin-top: 20px;
+}
+.footer__column.right{
+  flex-direction: row;
+  margin-top: 20px;
+}
+.footer__column img{
+  padding-left: 20px;
+}
+.footer__title{
+  text-align: left;
+  color: $color-primary;
+  font-size: 26px;
+  font-family: $raleway;
+  line-height: 30px;
+}
+.footer__details {
+  text-align: left;
+  font-family: $openSans;
+  font-size: 11px;
+  line-height: 15px;
+  color: $color-grey;
+
+}

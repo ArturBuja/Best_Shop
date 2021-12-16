@@ -1,0 +1,75 @@
+/*STATYSTYKI STATISTICS*/
+.statistics {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.statistics .statistics__title {
+  font-family: $raleway;
+  font-size: 2.25rem;
+  letter-spacing: 0;
+  line-height: 2.625rem;
+  color: $color-black;
+}
+
+.statistics .statistics__box {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  margin-top: 86px;
+  margin-bottom: 106px;
+}
+
+.statistics .statistics__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  text-align: center;
+}
+
+.statistics__item .item__circle {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.statistics__item .circleRed {
+  background-color: $color-redish;
+}
+
+.statistics__item .circleBlue {
+  background-color: $color-primary;
+}
+
+.statistics__item .circleGreen {
+  background-color: $color-green;
+}
+
+.statistics__item .item__title {
+  color: $color-black;
+  font-family: $raleway;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.3725rem;
+  margin: 13px 0 19px 0 ;
+}
+
+.statistics__item .item__text {
+  font-family: $openSans;
+  font-size: 1.0625rem;
+  line-height: 1.25rem;
+  letter-spacing: 0;
+  color: $color-grey;
+}
+.item__circle .item__icon{
+  transform: translateX(50%);
+}
+.circleBlue .item__icon {
+  transform: translateX(30%);
+}

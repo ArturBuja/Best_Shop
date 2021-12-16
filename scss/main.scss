@@ -1,0 +1,14 @@
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/mixins";
+
+@import "./layout/base";
+
+@import "./elements/header";
+@import "./elements/opening";
+@import "./elements/calculator";
+@import "./elements/contact";
+@import "./elements/benefits";
+@import "./elements/price";
+@import "./elements/statistics";
+@import "./elements/footer";

@@ -1,0 +1,55 @@
+/*NAWIGACJA*/
+.header {
+  background-color: $color-white;
+  box-shadow: 0 3px 6px #00000029;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.header .header__box {
+  display: flex;
+  justify-content: space-between;
+  height: 4.375rem;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: stretch;
+  height: 4.375rem;
+
+}
+
+.menu .menu__item {
+  margin-left: 4rem;
+  font-family: $openSans;
+  font-weight: 700;
+  color: $color-grey;
+  letter-spacing: 0.205rem;
+  font-size: 0.6875rem;
+  line-height: 4.375rem;
+}
+
+.header__box a {
+  text-decoration: none;
+}
+
+.header__box .logo {
+  font-family: $raleway;
+  font-size: 2rem;
+  letter-spacing: 0;
+  color: $color-primary;
+  font-weight: 300;
+}
+
+.menu .menu__item:hover {
+  border-bottom: 4px solid $color-primary;
+  color: $color-black;
+
+}
+
+.menu .menu__item--active {
+  border-bottom: 4px solid $color-primary;
+}

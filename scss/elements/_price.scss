@@ -1,0 +1,144 @@
+/*SEKCJA CEN*/
+
+.price__container{
+  width: 1266px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price__title{
+  padding-bottom: 50px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  font-family: $raleway;
+  color: #000000;
+}
+.card_container{
+  display: flex;
+  justify-content: space-between;
+}
+.card_container .price__card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  width: 370px;
+
+}
+
+.card_container .price__card:nth-child(1){
+  border: 1px solid $color-redish;
+  border-radius: 18px;
+
+}
+.card_container .price__card:nth-child(2){
+  border: 1px solid $color-primary;
+  border-radius: 18px;
+  box-shadow: 5px 10px 27px $color-primary-shadow;
+  width: 400px;
+  margin: -5px 0px;
+
+
+}
+.card_container .price__card:nth-child(3){
+  border: 1px solid $color-green;
+  border-radius: 18px;
+
+}
+
+.price__card .card__title{
+  text-align: left;
+  font-size: 1.25rem;
+  font-family: $raleway,sans-serif;
+  font-weight: bold;
+  margin: 34px 141px 14px;
+}
+.price__card .card__title:nth-child(2){
+  text-align: left;
+  font-size: 21px;
+  font-family: $raleway,sans-serif;
+  font-weight: bold;
+}
+.price__card .card__cost{
+  text-align: left;
+  font-size: 2.875rem;
+  font-family: $openSans,sans-serif;
+  font-weight: 300;
+  margin: 14px 156px 5px;
+}
+.price__card .card__cost.left{
+  color: $color-redish;
+  padding-bottom: 69px;
+}
+.price__card .card__cost.center{
+  color: $color-primary;
+}
+.price__card .card__cost.right{
+  color: $color-green;
+}
+.cost_description{
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.75rem;
+  font-family: $raleway,sans-serif;
+  color: #13253B;
+  padding-bottom: 61px;
+}
+.cost_description.right{
+  padding-bottom: 50px;
+}
+.price__card .card__list{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.card__items{
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+
+.card__items::before{
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../../assets/Ckechmark-1.svg");
+}
+.card__item__not::before{
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../../assets/Close.svg");
+}
+.price__card .card__button{
+  font-weight: 700;
+  text-decoration: none;
+  list-style-type: none;
+  position: relative;
+  padding: 16px 57px;
+  font-size: 0.8125rem;
+  border-radius: 23px;
+  color: $color-white;
+}
+.card__button.left{
+  bottom: -21px;
+  background-color: $color-redish;
+}
+.card__button.center{
+  bottom: -87px;
+  background-color: $color-primary;
+  padding: 16px 64px;
+}
+.card__button.right{
+  bottom: -29px;
+  background-color: $color-green;
+}
