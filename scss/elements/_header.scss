@@ -64,6 +64,10 @@
     font-size: 0.6875rem;
     line-height: 4.375rem;
 
+    @include mobile {
+      margin-left: 1rem;
+
+    }
 
     &:hover {
       border-bottom: 4px solid $color-primary;
