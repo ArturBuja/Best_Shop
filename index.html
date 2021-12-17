@@ -21,10 +21,18 @@
             BestShop
         </a>
         <nav class="menu">
-            <a href="" class="menu__item menu__item--active">WHY US</a>
-            <a href="" class="menu__item">BENEFITS</a>
-            <a href="" class="menu__item">PRICES</a>
-            <a href="" class="menu__item">CONTACT</a>
+            <input type="checkbox" class="menu__btn" id="menu__btn">
+            <label for="menu__btn" class="menu__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="header__nav">
+                <li class="nav__element"><a href="" class="menu__item menu__item--active">WHY US</a></li>
+                <li class="nav__element"><a href="" class="menu__item">BENEFITS</a></li>
+                <li class="nav__element"><a href="" class="menu__item">PRICES</a></li>
+                <li class="nav__element"><a href="" class="menu__item">CONTACT</a></li>
+            </ul>
         </nav>
     </div>
 </header>
@@ -36,7 +44,7 @@
         <p class="opening__text">Open shop on our platform and increase your sales</p>
         <a href="" class="opening__button">Open your shop</a>
     </div>
-    <img src="./assets/Background.png" alt="desktop" class="opening_background">
+    <img src="./assets/Background.png" alt="desktop" class="opening__background">
 </section>
 <!--Sekcja statystyk na stronie-->
 <section class="statistics">
@@ -76,7 +84,7 @@
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
         <div class="bf__item">
-        <img src="./assets/Macbook.png" alt="macbook" class="item__image">
+            <img src="./assets/Macbook.png" alt="macbook" class="item__image">
         </div>
     </div>
     <div class="benefits__item benefits__item2 bf__container">
@@ -86,7 +94,7 @@
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
         <div class="bf__item2">
-        <img src="./assets/iPhone.png" alt="iphone" class="item__image">
+            <img src="./assets/iPhone.png" alt="iphone" class="item__image">
         </div>
     </div>
 
@@ -159,10 +167,12 @@
     <div class="calc__columns">
         <form class="calc__form">
             <div class="calc__input">
-                <input type="number" class="form__input" id="products" min="1" step="1" placeholder="Products quantity"/>
+                <input type="number" class="form__input" id="products" min="1" step="1"
+                       placeholder="Products quantity"/>
             </div>
             <div class="calc__input">
-                <input type="number" class="form__input" id="orders" min="1" step="1" placeholder="Estimated orders in month"/>
+                <input type="number" class="form__input" id="orders" min="1" step="1"
+                       placeholder="Estimated orders in month"/>
             </div>
             <div class="calc__select" id="package" data-value="">
                 <div class="select__input">

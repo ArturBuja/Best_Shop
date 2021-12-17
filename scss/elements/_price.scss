@@ -6,6 +6,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include notebook{
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .price__title{
@@ -20,6 +24,10 @@
 .card_container{
   display: flex;
   justify-content: space-between;
+  @include notebook{
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 .card_container .price__card{
   display: flex;

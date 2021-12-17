@@ -74,6 +74,10 @@
 .bf__container{
   max-width: 1200px;
   box-sizing: border-box;
+  @include notebook{
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 .benefits__item1 .item__image {
   width: 100%;

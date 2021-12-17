@@ -1,8 +1,20 @@
 @use 'sass:math';
 
 @mixin tablet {
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1024px) {
     @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 792px) {
+    @content
+  }
+}
+@mixin notebook{
+  @media screen and(max-width: 1352px) {
+    @content
+
   }
 }
 
