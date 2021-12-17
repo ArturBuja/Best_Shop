@@ -380,34 +380,39 @@ html {
   top: 0;
   z-index: 5;
 }
-
-.header .header__box {
+@media screen and (max-width: 792px) {
+  .header {
+    box-shadow: 0 3px 6px #00000029;
+  }
+}
+.header__nav {
+  display: inline-flex;
+}
+@media screen and (max-width: 792px) {
+  .header__nav {
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 70px;
+    z-index: 4;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #FFFFFF;
+    display: none;
+  }
+  .header__nav .nav__element {
+    padding: 0px;
+  }
+}
+.header__box {
   display: flex;
   justify-content: space-between;
   height: 4.375rem;
   align-items: center;
 }
-
-.menu {
-  display: flex;
-  align-items: stretch;
-  height: 4.375rem;
-}
-
-.menu .menu__item {
-  margin-left: 4rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  color: #A5A5A5;
-  letter-spacing: 0.205rem;
-  font-size: 0.6875rem;
-  line-height: 4.375rem;
-}
-
 .header__box a {
   text-decoration: none;
 }
-
 .header__box .logo {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
@@ -416,16 +421,83 @@ html {
   font-weight: 300;
 }
 
-.menu .menu__item:hover {
+.menu {
+  display: flex;
+  align-items: stretch;
+  height: 4.375rem;
+}
+.menu__item {
+  margin-left: 4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #A5A5A5;
+  letter-spacing: 0.205rem;
+  font-size: 0.6875rem;
+  line-height: 4.375rem;
+}
+.menu__item:hover {
   border-bottom: 4px solid #08A6E4;
   color: #000000;
 }
-
-.menu .menu__item--active {
+@media screen and (max-width: 792px) {
+  .menu__item:hover {
+    border-bottom: none;
+  }
+}
+.menu__item--active {
   border-bottom: 4px solid #08A6E4;
+}
+@media screen and (max-width: 792px) {
+  .menu__item--active {
+    border-bottom: none;
+  }
+}
+.menu__btn {
+  display: none;
+  position: absolute;
+}
+@media screen and (max-width: 792px) {
+  .menu__btn:checked ~ .header__nav {
+    display: flex;
+    box-shadow: 0 3px 6px #00000029;
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 5px);
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -5px);
+  }
+}
+.menu__toggle {
+  display: none;
+}
+.menu__toggle span {
+  width: 20px;
+  height: 2px;
+  background-color: #08A6E4;
+  display: block;
+  margin-bottom: 3px;
+  transition: 0.3s all ease-in-out;
+}
+.menu__toggle span:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 792px) {
+  .menu__toggle {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
 }
 
 /*OPENING STRONY WRAZ Z LOGO/ OPENING TITLE*/
+.opening {
+  position: relative;
+}
 .opening__title {
   font-family: var(--raleway);
   font-weight: normal;
@@ -433,9 +505,7 @@ html {
   line-height: 3.5625rem;
   color: var(--color-black);
   text-align: center;
-  letter-spacing: 0;
 }
-
 .opening__text {
   font-family: var(--openSans);
   font-weight: normal;
@@ -446,19 +516,38 @@ html {
   text-align: center;
   padding: 20px 0 38px 0;
 }
-
-.opening .opening__contentBox {
+@media screen and (max-width: 792px) {
+  .opening__text {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 0 70px;
+  }
+}
+.opening__contentBox {
   margin-top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.opening .opening__button {
+@media screen and (max-width: 792px) {
+  .opening__contentBox {
+    margin-top: 100px;
+  }
+}
+.opening__background {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 792px) {
+  .opening__background {
+    width: 220%;
+    transform: translateX(-28%);
+  }
+}
+.opening__button {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0;
   line-height: 1.375rem;
   color: #FFFFFF;
   text-align: center;
@@ -469,22 +558,17 @@ html {
   align-self: center;
   padding: 1.375rem 9.75rem;
 }
-
-.opening {
-  position: relative;
-}
-
-.opening .opening_background {
-  width: 100vw;
-  position: relative;
-  bottom: 0;
+@media screen and (max-width: 792px) {
+  .opening__button {
+    padding: 20px 60px;
+  }
 }
 
 .calc {
   padding: 80px 0;
   background-color: #F7F7F7;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1024px) {
   .calc {
     padding: 30px 15px;
   }
@@ -497,7 +581,7 @@ html {
   margin: 50px auto 0;
   display: flex;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1024px) {
   .calc__columns {
     display: block;
   }
@@ -506,7 +590,7 @@ html {
   width: 50%;
   margin-right: 20px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1024px) {
   .calc__form {
     width: 100%;
     margin-right: 0;
@@ -538,7 +622,6 @@ html {
 }
 .calc__select .select__input {
   position: relative;
-  height: 40px;
   vertical-align: middle;
   padding: 13px 20px;
   cursor: pointer;
@@ -582,11 +665,11 @@ html {
 }
 .calc__summary {
   width: 50%;
-  margin-left: 20px;
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1024px) {
   .calc__summary {
     width: 100%;
     margin-left: 0;
@@ -830,6 +913,12 @@ html {
   max-width: 1200px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1352px) {
+  .bf__container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
 
 .benefits__item1 .item__image {
   width: 100%;
@@ -950,6 +1039,12 @@ html {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 1352px) {
+  .price__container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
 
 .price__title {
   padding-bottom: 50px;
@@ -964,6 +1059,12 @@ html {
 .card_container {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1352px) {
+  .card_container {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .card_container .price__card {
